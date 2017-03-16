@@ -3,6 +3,7 @@ package com.crawl.util;
 import jdk.nashorn.internal.runtime.OptimisticReturnFilters;
 
 import java.util.Optional;
+import java.util.Set;
 
 public class DomainUtil {
 
@@ -26,5 +27,29 @@ public class DomainUtil {
         } else
             return Optional.empty();
 
+    }
+
+    private String getAbsolutePath(String url, String rootDomain) {
+        if (url!=null) {
+            if (url.startsWith("/"))
+                url = "www." + rootDomain + url;
+        }
+        return url;
+
+    }
+
+    public boolean isInRootDomain (String rootDomain, String url) {
+        Optional<String> domain = extractDomain(getAbsolutePath(url, rootDomain));
+        if (domain.isPresent()){
+
+            if (domain.get().contains(rootDomain)) {
+                return true;
+            }
+
+        }
+         else
+            return false;
+
+        return false;
     }
 }

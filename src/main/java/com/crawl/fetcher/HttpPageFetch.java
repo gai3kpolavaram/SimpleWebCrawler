@@ -18,7 +18,7 @@ public class HttpPageFetch implements PageFetcher {
 
    public Optional<BufferedReader> getPage(String url) throws MalformedURLException, IOException {
 
-       logger.info("URL to fetch: " + url);
+       //logger.info("URL to fetch: " + url);
        InputStream iStream = null;
        BufferedReader bufReader = null;
        try {
@@ -28,7 +28,7 @@ public class HttpPageFetch implements PageFetcher {
 
            bufReader = new BufferedReader(new InputStreamReader(iStream));
        } catch (UnknownHostException e) {
-            logger.log(Level.INFO, "Domain does not exist");
+            //logger.log(Level.INFO, "Domain does not exist");
        }
 
        if (bufReader!=null)
