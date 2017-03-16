@@ -1,4 +1,4 @@
-package com.crawl.core.fetcher;
+package com.crawl.fetcher;
 
 import java.io.BufferedReader;
 import java.io.IOException;

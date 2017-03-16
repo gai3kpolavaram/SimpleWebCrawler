@@ -1,9 +1,8 @@
-package com.crawl.core.fetcher;
+package com.crawl.fetcher;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -12,13 +11,13 @@ import java.util.Optional;
 import static org.junit.Assert.*;
 
 
-public class HttpFetchTest {
+public class HttpPageFetchTest {
 
     PageFetcher fetcher = null;
 
     @Before
     public void setUP() {
-        fetcher = new HttpFetch();
+        fetcher = new HttpPageFetch();
     }
 
     @Test (expected = MalformedURLException.class)

@@ -1,4 +1,4 @@
-package com.crawl.core.fetcher;
+package com.crawl.fetcher;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HttpFetch implements PageFetcher {
+public class HttpPageFetch implements PageFetcher {
 
     private static Logger logger = Logger.getLogger(PageFetcher.class.getName());
 
