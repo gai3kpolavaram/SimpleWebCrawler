@@ -40,7 +40,7 @@ public class HttpFetchTest {
 
     @Test
     public void testGoodURLReturnsContent() throws MalformedURLException, IOException{
-        Optional<BufferedReader> buff = fetcher.getPage("https://www.google.com");
+        Optional<BufferedReader> buff = fetcher.getPage("http://wiprodigital.com");
         assertTrue(buff.isPresent());
     }
 
